@@ -9,4 +9,5 @@ func main() {
 	fullSlice := myArr[:]
 	removeThreeItem := deleteItem(fullSlice, 2)
 	fmt.Printf("mySlice %+v\n", removeThreeItem)
+	print(1)
 }
