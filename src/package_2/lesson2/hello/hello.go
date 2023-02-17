@@ -3,5 +3,5 @@ package hello
 import "fmt"
 
 func init() {
-	fmt.Println("int")
+	fmt.Println("init func")
 }
