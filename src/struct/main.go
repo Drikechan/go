@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"sync"
+	"time"
 )
 
 type Person struct {
@@ -49,5 +51,20 @@ func main() {
 	var res2 Result
 	errs = json.Unmarshal(jsons, &res2)
 	fmt.Println(res2)
+
+	go func() {
+		var a sync.WaitGroup
+		a.Add(1)
+		getTerminalCode()
+	}()
+}
+
+func getTerminalCode() {
+	time.Sleep(time.Second * 5)
+	newArrayList := []int{}
+	for i := 0; i < 10; i++ {
+		newArrayList[i] = i
+		fmt.Println(i)
+	}
 
 }
