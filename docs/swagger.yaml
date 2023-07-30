@@ -1,0 +1,80 @@
+info:
+  contact: {}
+paths:
+  /task/createTask:
+    post:
+      parameters:
+      - description: 任务名称
+        in: formData
+        name: title
+        type: string
+      - description: 任务内容
+        in: formData
+        name: content
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 创建任务
+      tags:
+      - 任务模块
+  /task/getTaskList:
+    post:
+      parameters:
+      - description: 页码
+        in: query
+        name: currentPage
+        type: string
+      - description: 页数
+        in: query
+        name: pageSize
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 查询任务列表
+      tags:
+      - 任务模块
+  /user/login:
+    post:
+      parameters:
+      - description: 用户名
+        in: formData
+        name: username
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 登录
+      tags:
+      - 用户模块
+  /user/register:
+    post:
+      parameters:
+      - description: 用户名
+        in: formData
+        name: username
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: 新增用户
+      tags:
+      - 用户模块
+swagger: "2.0"

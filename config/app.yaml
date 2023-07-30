@@ -1,0 +1,11 @@
+settings:
+  application:
+    port: ":4000"
+  database:
+    driver: "mysql"
+    userName: 'root'
+    password: '123456'
+    charset: 'utf-8'
+    dbName: 't-todolist'
+    addr: '127.0.0.1'
+    port: '3306'
